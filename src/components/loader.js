@@ -1,9 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Loader from './Loading.gif';
 
-export class loader extends Component {
-  render() 
-  {
+const loader = () =>
+{
       const loaderContainerStyle = {
         display: 'flex',
         justifyContent: 'center',
@@ -16,8 +15,8 @@ export class loader extends Component {
           <img className = "my-3" src={Loader} alt="Loading" />
         </div>
       );
-    }
-  }
+  
+}
 
 export default loader;
 
