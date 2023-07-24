@@ -6,6 +6,7 @@ import Navbar from './components/Navbars';
 import News from './components/News';
 import {BrowserRouter as Router,Routes, Route} from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar'
+import HomePage from './components/homePage';
 
 
 const App = () =>
@@ -27,7 +28,8 @@ const App = () =>
               //onLoaderFinished={() => setProgress(0)}
             />
             <Routes>
-              <Route exact path="/" element={<News setProgress = {setProgress} apiKey = {apiKey} key = "home" pageSize = {pageSize} country="in" category="home"/>}></Route>
+              <Route exact path="/home" element={<HomePage />} />
+              {/* <Route exact path="/" element={<News setProgress = {setProgress} apiKey = {apiKey} key = "home" pageSize = {pageSize} country="in" category="home"/>}></Route> */}
               <Route exact path="/general" element={<News setProgress = {setProgress} apiKey = {apiKey} key = "general" pageSize = {pageSize} country="in" category="general"/>}></Route>
               <Route exact path="/business" element={<News setProgress = {setProgress} apiKey = {apiKey} key = "business" pageSize = {pageSize} country="in" category="business"/>}></Route>
               <Route exact path="/entertainment" element={<News setProgress = {setProgress} apiKey = {apiKey} key = "entertainment" pageSize = {pageSize} country="in" category="entertainment"/>}></Route>
